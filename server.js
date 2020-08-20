@@ -12,9 +12,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const MONGOOD_URI = process.env.MONGODB_URI || 'mongodb://localhost/workoutDB';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/workoutDB';
 
-mongoose.connect(MONGOOD_URI, {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
 });
 
